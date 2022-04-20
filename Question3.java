@@ -11,10 +11,8 @@ public class Question3
      */
     
     Scanner in = new Scanner(System.in);
-    System.out.println("Enter a number: ");
     int number = in.nextInt();
     int result = number * number;
-    System.out.println(number + " squared is " + result);
     
   }
 }
