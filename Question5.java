@@ -25,8 +25,33 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
-     
-    Scanner in = new Scanner(System.in);
     
+    Scanner in = new Scanner(System.in);
+    int count = in.nextInt();
+    int[] array = new int[count];
+    for(int i = 0; i < count; i++)
+    {
+      int input = in.nextInt();
+      array[i] = input;
+    }
+    int maxValue = 0;
+    int maxCount = 0;
+    for (int i = 0; i < array.length; i++) 
+    {
+      int track = 0;
+      for (int j = 0; j < array.length; j++) 
+      {
+        if (array[j] == array[i])
+        {
+          track++;
+        }
+      }
+      if (track > maxCount) 
+      {
+        maxCount = track;
+        maxValue = array[i];
+      }
+    }
+    System.out.println(maxValue);
   }
 }
